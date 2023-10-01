@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News URLs</title>
+</head>
+<body>
+    <h1>News URLs for Topics</h1>
+    <ul>
+        {% for topic, url in news_urls.items() %}
+            <li>
+                <h2>{{ topic }}</h2>
+                <ul>
+                    <li><a href="{{ url }}" target="_blank">{{ url }}</a></li>
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
